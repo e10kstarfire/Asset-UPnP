@@ -13,7 +13,6 @@ chown -R nobody:users /home && \
 
 #Install Asset-upnp
 apt-get update && \
-#apt-get install -y wget && \
 mkdir -p /usr/bin/asset && \
 chmod -R 777 /usr/bin/asset
 
@@ -21,7 +20,6 @@ chmod -R 777 /usr/bin/asset
 ADD AssetUPnP-Linux-x64-premium.tar.gz /usr/bin/asset/
 
 RUN \
-apt-get purge --remove -y wget && \
 apt-get autoremove -y && \
 apt-get clean && \
 mkdir /config && \
